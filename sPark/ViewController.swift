@@ -22,7 +22,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MGLMapViewDel
         let _:MGLCoordinateSpan = MGLCoordinateSpanMake(0.01, 0.01)
         let _:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
         self.mapView.showsUserLocation = true
-        //example
+        //comment
         
     }
     
