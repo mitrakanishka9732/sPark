@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,24 @@
 		97BFD9F41F1A848E002A1F58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BFD9F21F1A848E002A1F58 /* Main.storyboard */; };
 		97BFD9F61F1A848E002A1F58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97BFD9F51F1A848E002A1F58 /* Assets.xcassets */; };
 		97BFD9F91F1A848E002A1F58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BFD9F71F1A848E002A1F58 /* LaunchScreen.storyboard */; };
+		97BFDA031F1A8749002A1F58 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BFDA021F1A8749002A1F58 /* Mapbox.framework */; };
+		97BFDA041F1A8749002A1F58 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 97BFDA021F1A8749002A1F58 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		97BFDA091F1A8A2D002A1F58 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BFDA081F1A8A2D002A1F58 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		97BFDA051F1A8749002A1F58 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				97BFDA041F1A8749002A1F58 /* Mapbox.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		97BFD9EB1F1A848E002A1F58 /* sPark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sPark.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +39,8 @@
 		97BFD9F51F1A848E002A1F58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97BFD9F81F1A848E002A1F58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97BFD9FA1F1A848E002A1F58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97BFDA021F1A8749002A1F58 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
+		97BFDA081F1A8A2D002A1F58 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97BFDA091F1A8A2D002A1F58 /* CoreLocation.framework in Frameworks */,
+				97BFDA031F1A8749002A1F58 /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +59,10 @@
 		97BFD9E21F1A848E002A1F58 = {
 			isa = PBXGroup;
 			children = (
+				97BFDA021F1A8749002A1F58 /* Mapbox.framework */,
 				97BFD9ED1F1A848E002A1F58 /* sPark */,
 				97BFD9EC1F1A848E002A1F58 /* Products */,
+				97BFDA071F1A8A2D002A1F58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +87,14 @@
 			path = sPark;
 			sourceTree = "<group>";
 		};
+		97BFDA071F1A8A2D002A1F58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97BFDA081F1A8A2D002A1F58 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +105,8 @@
 				97BFD9E71F1A848E002A1F58 /* Sources */,
 				97BFD9E81F1A848E002A1F58 /* Frameworks */,
 				97BFD9E91F1A848E002A1F58 /* Resources */,
+				97BFDA051F1A8749002A1F58 /* Embed Frameworks */,
+				97BFDA061F1A880E002A1F58 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -92,17 +125,16 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "Kanishka Mitra";
+				ORGANIZATIONNAME = sPark;
 				TargetAttributes = {
 					97BFD9EA1F1A848E002A1F58 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = RU4QV9C98J;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 97BFD9E61F1A848E002A1F58 /* Build configuration list for PBXProject "sPark" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -131,6 +163,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		97BFDA061F1A880E002A1F58 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework/strip-frameworks.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		97BFD9E71F1A848E002A1F58 /* Sources */ = {
@@ -263,7 +311,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RU4QV9C98J;
+				DEVELOPMENT_TEAM = QCFQP9G365;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = sPark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = M.sPark;
@@ -276,7 +328,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RU4QV9C98J;
+				DEVELOPMENT_TEAM = QCFQP9G365;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = sPark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = M.sPark;
@@ -304,6 +360,7 @@
 				97BFD9FF1F1A848E002A1F58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
